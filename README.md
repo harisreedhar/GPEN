@@ -2,8 +2,8 @@
 
 [Paper](https://arxiv.org/abs/2105.06070) | [Supplementary](https://www4.comp.polyu.edu.hk/~cslzhang/paper/GPEN-cvpr21-supp.pdf) | [Demo](https://vision.aliyun.com/experience/detail?spm=a211p3.14020179.J_7524944390.17.66cd4850wVDkUQ&tagName=facebody&children=EnhanceFace)
 
-[Tao Yang](https://cg.cs.tsinghua.edu.cn/people/~tyang)<sup>1</sup>, Peiran Ren<sup>1</sup>, Xuansong Xie<sup>1</sup>, [Lei Zhang](https://www4.comp.polyu.edu.hk/~cslzhang)<sup>1,2</sup>  
-_<sup>1</sup>[DAMO Academy, Alibaba Group](https://damo.alibaba.com), Hangzhou, China_  
+[Tao Yang](https://cg.cs.tsinghua.edu.cn/people/~tyang)<sup>1</sup>, Peiran Ren<sup>1</sup>, Xuansong Xie<sup>1</sup>, [Lei Zhang](https://www4.comp.polyu.edu.hk/~cslzhang)<sup>1,2</sup>
+_<sup>1</sup>[DAMO Academy, Alibaba Group](https://damo.alibaba.com), Hangzhou, China_
 _<sup>2</sup>[Department of Computing, The Hong Kong Polytechnic University](http://www.comp.polyu.edu.hk), Hong Kong, China_
 
 #### Face Restoration
@@ -54,6 +54,11 @@ cd GPEN
 python face_enhancement.py --model GPEN-BFR-512 --size 512 --channel_multiplier 2 --narrow 1 --use_sr --indir examples/imgs --outdir examples/outs-BFR
 ```
 
+- Restore face (video):
+```bash
+python infer_video.py --model GPEN-BFR-512 --size 512 --channel_multiplier 2 --narrow 1 --use_sr --input_video <-- video path --> --output_dir <-- output directory -->
+```
+
 - Colorize faces:
 ```bash
 python face_colorization.py
@@ -70,7 +75,7 @@ python segmentation2face.py
 ```
 
 ## Main idea
-<img src="figs/architecture.png" width="784px"/> 
+<img src="figs/architecture.png" width="784px"/>
 
 ## Citation
 If our work is useful for your research, please consider citing:
@@ -81,7 +86,7 @@ If our work is useful for your research, please consider citing:
 	    booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 	    year={2021}
     }
-    
+
 ## License
 © Alibaba, 2021. For academic and non-commercial use only.
 
